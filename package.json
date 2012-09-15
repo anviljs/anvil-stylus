@@ -1,0 +1,20 @@
+{
+  "author": "Alex Robson <alex@sharplearningcurve.com> (http://sharplearningcurve.com)",
+  "name": "anvil-stylus",
+  "description": "Stylus plugin for anvil.js",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/arobson/anvil-stylus.git"
+  },
+  "engines": {
+    "node": "~0.8.3"
+  },
+  "main": "./lib/stylus.js",
+  "dependencies": { "stylus": "~0.29.0" },
+  "devDependencies": {
+    "should": "~1.1"
+  },
+  "optionalDependencies": {},
+  "keywords": [ "anvil", "stylus" ]
+}

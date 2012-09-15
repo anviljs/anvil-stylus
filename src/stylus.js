@@ -1,0 +1,37 @@
+var stylus = require( "stylus" );
+
+module.exports = function( _, anvil ) {
+	return anvil.plugin( {
+		name: "anvil.stylus",
+		config: {
+			"options": {}
+		},
+		
+		configure: function( config, command, done ) {
+			anvil.addCompiler( ".styl", this );
+			done();
+		},
+
+		compile: function( content, done ) {
+			try {
+				var compile = stylus.render( 
+					content, 
+					anvil.config[ this.name ].options || {}, 
+					function( err, css ) {
+						if( err ) {
+							done( "", err );
+						} else {
+							done( css );
+						}
+					}
+				);
+			} catch ( error ) {
+				done( "", error );
+			}
+		},
+
+		rename: function( name ) {
+			return name.replace( ".styl", ".css" );
+		}
+	} );
+};
