@@ -1,10 +1,10 @@
-## Anvil Stylus Plugin
+## Anvil Stylus Extension
 
-This plugin requires anvil.js version 0.8.* or greater.
+This extension requires anvil.js version 0.9.* or greater.
 
 ### Note
 
-Some bizarre issue in stylus means that it can't run within any direction that contains ".styl" which means I had to use a dash instead of a period. Sounds insane? It's true. Proofus: https://github.com/LearnBoost/stylus/issues/807
+Some bizarre issue in stylus means that it can't run within any directory ending in ".styl" which means I had to use a dash instead of a period. Sounds insane? It's true. Proofus: https://github.com/LearnBoost/stylus/issues/807
 
 ## Installation
 
@@ -12,4 +12,4 @@ Some bizarre issue in stylus means that it can't run within any direction that c
 
 ## Usage
 
-If this plugin is installed and enabled, it will automatically 'compile' files ending in .jade and output .html files in your output folder.
+If this plugin is installed and enabled, it will automatically 'compile' files ending in .styl and produce .css files in your output folder.

@@ -8,15 +8,15 @@ module.exports = function( _, anvil ) {
 		},
 		
 		configure: function( config, command, done ) {
-			anvil.addCompiler( ".styl", this );
+			anvil.addCompiler( ".styl", this, "text/css" );
 			done();
 		},
 
 		compile: function( content, done ) {
 			try {
-				var compile = stylus.render( 
-					content, 
-					anvil.config[ this.name ].options || {}, 
+				var compile = stylus.render(
+					content,
+					anvil.config[ this.name ].options || {},
 					function( err, css ) {
 						if( err ) {
 							done( "", err );
