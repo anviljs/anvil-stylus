@@ -1,4 +1,4 @@
-var stylus = require( "stylus" );
+var stylus;
 
 module.exports = function( _, anvil ) {
 	return anvil.plugin( {
@@ -13,6 +13,9 @@ module.exports = function( _, anvil ) {
 		},
 
 		compile: function( content, done ) {
+			if( !stylus ) {
+				stylus = require( "stylus" );
+			}
 			try {
 				var compile = stylus.render(
 					content,
